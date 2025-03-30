@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    /* COLORS */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #000000;
+    --secondary-color: #c50909;
+    --light-pink-color:#faf4f5;
+    --medium-gray-color: #ccc;
+
+    /* FONTS*/
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-1: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* FONT WEIGHT */
+    --font-weight-normal:400;
+    --font-weight-medium:500;
+    --font-weight-semibold:600;
+    --font-weight-bold:700;
+
+    /* BORDER RADIUS */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* SITE MAX WIDTH */
+    --site-max-width:1300px;
+}
+
+/* STYLING*/
+
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button{
+cursor: pointer;
+border: none;
+background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content{
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width) ;
+}
+/* NAVBAR STYLING*/
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color) ;
+}
+header .navbar{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .nav-logo .log-text {
+    color: #fff; 
+    font-family: "Vivaldi", cursive;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+@font-face {
+    font-family: "Vivaldi";
+    src: url("fonts/Vivaldi.ttf") format("truetype");
+}
+.hero-video {
+    width: 100%;
+    border-radius: var(--border-radius-m);
+}
+.hero-image-wrpper {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Faz o vídeo ocupar a tela inteira */
+    display: flex;
+    justify-content: center;  /* Centraliza o vídeo horizontalmente */
+    align-items: center;      /* Centraliza o vídeo verticalmente */
+    overflow: hidden;  /* Impede que o vídeo saia da área visível */
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Faz o vídeo cobrir toda a área sem distorcer */
+    border-radius: var(--border-radius-m);  /* Se quiser bordas arredondadas */
+}
+
+
+.log-text {
+    font-family: "Vivaldi", cursive;
+    color: white;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu{
+    display:flex;
+    gap: 8px;
+}
+.navbar .nav-menu .nav-link{
+    padding: 10px 18px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+.navbar .nav-menu .nav-link:hover{
+    color: var(--primary-color);
+    background: var(--secondary-color);
+
+}
+
+.hero-section{
+    background: var(--primary-color);
+    min-height: 100vh;
+}
+
+.hero-section .section-content{
+    display:flex;
+    align-items: center;
+    color: var(--white-color);
+    justify-content: space-between;
+}
+
+.hero-section .hero-details .title{
+    font-size:var(--font-size-xxl);
+    color:var(--secondary-color);
+    font-family: "Miniver", sans-serif;
+
+}
+.hero-section .hero-details .subtitle {
+font-size: var(--font-size-xl);
+margin-top: 270px;
+max-width: 70%;
+font-weight: var(--font-weight-semibold);
+}
+
+.hero-section .hero-details .description{
+    font-size: var(--font-size-m);
+    max-width: 70%;
+    margin: 24px 0 40px;
+}
+
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 23px;
+}
+
+.hero-section .hero-details .button {
+    padding: 10px 26px;
+    border: 2px solid transparent;
+    color: var(--primary-color);
+    border-radius: var(--border-radius-m) ;
+    background: var(--secondary-color);
+    font-weight: var(--font-weight-medium);
+    transition:0.3s ease;
+}
+
+.hero-section .hero-details .button:hover, 
+.hero-section .hero-details .contact-us {
+   color: var(--white-color);
+   border-color: var(--white-color);
+   background: transparent;
+}
+
+.hero-section .hero-details .contact-us:hover{
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+}
+
+.hero-details {
+    position: absolute;
+    top: 14%; /* Ajuste para subir ou descer */
+}
